@@ -27,11 +27,11 @@ except Exception:
     raise ValueError("Error loading LLM model.")
 
 def generate_text(content):
-prompt = PROMPT + f"n{content}"
+    prompt = PROMPT + f"n{content}"
 
-with llm_model.chat_session():
-    output = llm_model.generate(prompt, temp=0.7, max_tokens=1024)
-    output = output.strip()
+    with llm_model.chat_session():
+        output = llm_model.generate(prompt, temp=0.7, max_tokens=1024)
+        output = output.strip()
 
     return output
 
