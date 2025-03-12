@@ -1,2 +1,3 @@
 venv/
 frontend/generated/
+gpt_models/gpt4all/*.gguf
